@@ -17,7 +17,7 @@ type Return = {
     }
 }
 
-const usePopup = () : Return => {
+const useModal = () : Return => {
 
     const [open, setOpen] = React.useState<boolean>(false)
 
@@ -38,4 +38,4 @@ const usePopup = () : Return => {
     }
 }
 
-export default usePopup
+export default useModal

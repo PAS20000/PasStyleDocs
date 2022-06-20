@@ -7,7 +7,7 @@ const Css = {
         const {theme} = useThemeCTX()
 
         return{
-            transform:'translate(90vh, 25vh)',
+            transform:'translate(50vh, 25vh)',
             position:'fixed',
             bg:theme.colors.bg,
             pd:'20px',

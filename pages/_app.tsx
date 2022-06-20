@@ -1,3 +1,4 @@
+import * as React from 'react'
 import type { AppProps } from 'next/app'
 import GlobalProivider from '../src/contexts'
 import PasStyleProvider from '../src/_PasStyle/Contexts'
@@ -8,8 +9,6 @@ const App = ({
   Component, 
   pageProps 
 } : AppProps) => {
-
-
 
   return (
     <PasStyleProvider>

@@ -11,10 +11,10 @@ import Container from '../../src/components/Layout/Container'
 import Config from './components/Config'
 import { Musics } from '../api/music'
 import { Users } from '../api/users'
-import Popup from '../../src/_PasStyle/Components/Popup'
-import PopupBody from '../../src/_PasStyle/Components/Popup/PopupBody'
-import usePopup from '../../src/_PasStyle/Components/Popup/hooks/usePopup'
 import useThemeCTX from '../../src/_PasStyle/Contexts/ThemeContext/useThemeCTX'
+import Modal from '../../src/_PasStyle/Components/Modal'
+import ModalBody from '../../src/_PasStyle/Components/Modal/ModalBody'
+import useModal from '../../src/_PasStyle/Components/Modal/hooks/useModal'
 
 export const getStaticProps : GetStaticProps = async (ctx) => {
     
@@ -61,7 +61,7 @@ const Demo = ({
 
     const { theme } = useThemeCTX()
     const [ show, setShow ] = React.useState<ShowState>('props')
-   const {state} = usePopup()
+   const {state} = useModal()
 
     return(
         <>
@@ -71,19 +71,6 @@ const Demo = ({
                 />
            </Header>
             <Main>
-                <Popup state={state}>
-                    <PopupBody
-                         transform='translate(50vh, 10vh)'
-                         bg={theme.colors.bg}
-                         b_radius='8px'
-                         shadow='2px 2px 10px black'
-                    >
-                        <Form
-                            setShow={setShow}
-                            show={show}
-                        />
-                    </PopupBody>
-                </Popup>
                <Container 
                     pd='50px' 
                     mg='50px'
@@ -110,6 +97,18 @@ const Demo = ({
                     )}
                </Container>
             </Main>
+            <Modal state={state}>
+                    <ModalBody
+                         bg={theme.colors.bg}
+                         b_radius='8px'
+                         shadow='2px 2px 10px black'
+                    >
+                        <Form
+                            setShow={setShow}
+                            show={show}
+                        />
+                    </ModalBody>
+                </Modal>
             <Footer>
 
             </Footer>

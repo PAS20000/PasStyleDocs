@@ -9,9 +9,10 @@ import { dataMusics, dataUsers } from './api'
 import Content from '../src/components/Layout/Content'
 import { Musics } from './api/music'
 import { Users } from './api/users'
-import Popup from '../src/_PasStyle/Components/Popup'
-import PopupBody from '../src/_PasStyle/Components/Popup/PopupBody'
-import usePopup from '../src/_PasStyle/Components/Popup/hooks/usePopup'
+import Popup from '../src/_PasStyle/Components/Modal'
+import PopupBody from '../src/_PasStyle/Components/Modal/ModalBody'
+import usePopup from '../src/_PasStyle/Components/Modal/hooks/useModal'
+import Modal from '../src/_PasStyle/Components/Modal/Popup'
 
 export const getStaticProps : GetStaticProps = async (ctx) => {
     

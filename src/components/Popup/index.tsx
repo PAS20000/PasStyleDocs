@@ -13,8 +13,12 @@ const Popup = (props:PasStyleProps<Props>) => {
 
     const close = () => state[1](false)
 
+    React.useEffect(() => {
+        
+    }, [])
+
     return(
-    <>  
+    <>
         {state[0] &&
             <>
                 <PasStyle {...props}
