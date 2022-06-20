@@ -9,10 +9,7 @@ import { dataMusics, dataUsers } from './api'
 import Content from '../src/components/Layout/Content'
 import { Musics } from './api/music'
 import { Users } from './api/users'
-import Popup from '../src/_PasStyle/Components/Modal'
-import PopupBody from '../src/_PasStyle/Components/Modal/ModalBody'
 import usePopup from '../src/_PasStyle/Components/Modal/hooks/useModal'
-import Modal from '../src/_PasStyle/Components/Modal/Popup'
 
 export const getStaticProps : GetStaticProps = async (ctx) => {
     
@@ -64,20 +61,6 @@ const Home = ({
                 />
            </Header>
             <Main>
-                <Popup state={state}>
-                   <PopupBody>
-                        <h1 style={{color:'black'}}>
-                            teste1
-                        </h1>
-                   </PopupBody>
-                </Popup>
-                <Popup state={state2}>
-                   <PopupBody>
-                        <h1 style={{color:'black'}}>
-                            teste2
-                        </h1>
-                   </PopupBody>
-                </Popup>
                 <Content 
                         tag='SECTION'
                         mg='50px'
@@ -85,6 +68,7 @@ const Home = ({
                         titleContent={'quick start'} 
                         text={'blá blá'}
                     >
+                       
                             <Code>
                                 npm i passtyle
                             </Code>
